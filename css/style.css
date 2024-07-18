@@ -1,0 +1,157 @@
+/************ NAVBAR CSS START ***********/
+*{padding: 0; margin: 0; box-sizing: border-box; font-family: sans-serif; text-decoration: none; list-style: none;}
+
+.header{
+    background: #333;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    position: relative;
+}
+
+.logo{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.nav ul{
+	display: flex;
+	position: relative;
+	column-gap: 30px;
+}
+
+.nav ul li{
+	position: relative;	
+	padding: 30px 0px;
+	border-bottom: 2px solid transparent;
+}
+
+.nav ul li a{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.nav ul li:hover{
+	border-bottom: 2px solid crimson;
+}
+
+.dropdown{
+ 	position: relative;
+}
+
+.dropdown ul{
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	top: 80px;
+	background:#fff;
+	width: 250px;
+	display: none;
+	transition: all 0.5s ease;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.dropdown ul li{
+   width: 100%;
+   padding:10px 30px;
+   margin: 5px 0px;
+}
+
+.dropdown ul li:hover{
+ 	background: #e1dfdf;
+ 	border-bottom: 2px solid transparent;
+ }
+
+.dropdown ul li a{
+	color: #000;
+}
+
+.dropdown:hover ul{
+ 	display: block;
+}
+
+.toggle-icon{
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+}
+
+
+
+/******** MOBILE MENU ********/
+@media only screen and (max-width: 768px){
+.header{
+	padding: 20px 50px;
+}
+
+.logo{
+	z-index: 1111;
+	font-size: 16px;
+}
+
+.toggle-icon{
+	display: block;
+}
+
+.nav ul{
+	flex-direction: column;
+	position: absolute;
+	top: -1000px;
+	left: 0;
+	right: 0;
+	background: #333;
+	text-align: center;
+	z-index: 11;
+	transition: all 0.5s ease-in-out;
+}
+
+.nav ul.active{
+  	top: 80px;
+  	z-index: 1;
+}
+
+.nav ul li:hover{
+	border-bottom: 2px solid transparent;
+}
+
+.dropdown ul{
+	background: #fff;
+	position: relative;
+	top: 10px;
+	margin: 0px auto;
+}
+
+.dropdown ul li:hover{
+	background: #e1dfdf;
+}
+}
+
+/******** MOBILE MENU ********/
+
+
+/************ NAVBAR CSS END ***********/
+
+
+/******** MAIN SECTION CSS ********/
+.main{
+ 	height: 100vh;
+ 	width: 100%;
+ 	background: skyblue;
+}
+
+/******** MAIN SECTION CSS ********/
+
+/******** SERVICE SECTION CSS ********/
+
+.service{
+	height: 100vh;
+	width: 100%;
+	background: crimson;
+}
