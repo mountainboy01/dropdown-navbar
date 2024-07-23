@@ -1,13 +1,12 @@
 /********* NAVBAR JS START *********/
 
-const menu = document.getElementById("menu");
-	  const icon = document.getElementById("icon");
+const navbar = document.querySelector("#nav-links");
+const hamburger = document.querySelector("#hamburger");
 
-	  icon.addEventListener("click",()=>{
-			menu.classList.toggle("active");
-			icon.classList.toggle("fa-times");
-	  });
-
+hamburger.addEventListener("click",()=>{
+	hamburger.classList.toggle("fa-times");
+	navbar.classList.toggle("active");
+});
 
 
 

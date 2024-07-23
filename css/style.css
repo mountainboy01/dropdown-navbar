@@ -1,137 +1,166 @@
 /************ NAVBAR CSS START ***********/
 *{padding: 0; margin: 0; box-sizing: border-box; font-family: sans-serif; text-decoration: none; list-style: none;}
 
-.header{
-    background: #333;
+/************ NAVBAR CSS START ***********/
+
+nav{
+    background: #fff;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
-    position: relative;
+    padding: 0px 100px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    z-index: 1111;
 }
 
-.logo{
-	color: #fff;
-	font-size: 20px;
-	font-weight: 600;
+nav .brand h1{
 	cursor: pointer;
 }
 
-.nav ul{
-	display: flex;
-	position: relative;
-	column-gap: 30px;
+nav .nav-links{
+    display: flex;
+    column-gap: 30px;
 }
 
-.nav ul li{
-	position: relative;	
-	padding: 30px 0px;
-	border-bottom: 2px solid transparent;
-}
-
-.nav ul li a{
-	color: #fff;
-	font-size: 16px;
-	font-weight: 500;
-}
-
-.nav ul li:hover{
-	border-bottom: 2px solid crimson;
+nav .nav-links li a{
+    color: #000;
+    font-size: 18px;
 }
 
 .dropdown{
- 	position: relative;
+	position: relative;
 }
 
-.dropdown ul{
-	flex-direction: column;
+.dropdown .dropdown-menu{
+    position: absolute;
+    top: 52px;
+    background: #fff;
+    width: 200px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    visibility: hidden;
+    transition: all 0.1s;
+    line-height: 45px;
+    opacity: 0;
+}
+
+.dropdown .dropdown-menu li a{
+	display: block;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+.dropdown .dropdown-menu li a:hover{
+	background: #c3c0c0;
+}
+
+.dropdown .dropdown-menu li a{
+	font-size: 16px;
+}
+
+.dropdown:hover > .dropdown-menu{
+	visibility: visible;
+	opacity: 1;
+}
+
+.submenu{
+	position: relative;
+}
+
+.submenu .dropdown-submenu{
 	position: absolute;
-	left: 0;
-	top: 80px;
-	background:#fff;
-	width: 250px;
+	top: 10px;
+	background: #fff;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+	width: 200px;
+	right: 203px;
+	transition: all 0.1s;
+}
+
+.dropdown-submenu{
+	visibility: hidden;
+}
+
+.submenu:hover >.dropdown-submenu {
+	visibility: visible;
+	top: 0px;
+}
+
+.hamburger{
 	display: none;
-	transition: all 0.5s ease;
-	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-}
-
-.dropdown ul li{
-   width: 100%;
-   padding:10px 30px;
-   margin: 5px 0px;
-}
-
-.dropdown ul li:hover{
- 	background: #e1dfdf;
- 	border-bottom: 2px solid transparent;
- }
-
-.dropdown ul li a{
-	color: #000;
-}
-
-.dropdown:hover ul{
- 	display: block;
-}
-
-.toggle-icon{
-	font-size: 30px;
-	color: #fff;
 	cursor: pointer;
-	display: none;
 }
 
+.hamburger i{
+	font-size: 25px;
+	transition: all 0.5s linear;
+}
 
 
 /******** MOBILE MENU ********/
 @media only screen and (max-width: 768px){
-.header{
-	padding: 20px 50px;
+nav{
+	padding: 0px 20px;
 }
 
-.logo{
-	z-index: 1111;
-	font-size: 16px;
+.hamburger{
+ 	display: block;
 }
 
-.toggle-icon{
+nav .nav-links{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 30px;
+    visibility: hidden;
+    overflow: hidden;
+    line-height: 60px;
+    max-height: 0;
+    transition: all 0.5s linear;
+}
+
+nav .nav-links.active{
+	visibility: visible;
+	max-height: 100vh;
+}
+
+.dropdown .dropdown-menu{
+    position: relative;
+    top:8px;
+    right: 0;
+    width: 100%;
+    border: none;
+    display: none;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.dropdown:hover .dropdown-menu{
+ 	display: block;
+}
+
+.submenu .dropdown-submenu{
+    position: relative;
+    left: 0;
+    top: 8px;
+    display: none;
+    width: 100%;
+    padding: 0px 30px;
+    box-shadow: none;
+}
+
+.submenu:hover .dropdown-submenu{
 	display: block;
 }
-
-.nav ul{
-	flex-direction: column;
-	position: absolute;
-	top: -1000px;
-	left: 0;
-	right: 0;
-	background: #333;
-	text-align: center;
-	z-index: 11;
-	transition: all 0.5s ease-in-out;
 }
 
-.nav ul.active{
-  	top: 80px;
-  	z-index: 1;
-}
 
-.nav ul li:hover{
-	border-bottom: 2px solid transparent;
-}
-
-.dropdown ul{
-	background: #fff;
-	position: relative;
-	top: 10px;
-	margin: 0px auto;
-}
-
-.dropdown ul li:hover{
-	background: #e1dfdf;
-}
-}
 
 /******** MOBILE MENU ********/
 
@@ -143,7 +172,7 @@
 .main{
  	height: 100vh;
  	width: 100%;
- 	background: skyblue;
+ 	background: #333;
 }
 
 /******** MAIN SECTION CSS ********/
@@ -153,5 +182,5 @@
 .service{
 	height: 100vh;
 	width: 100%;
-	background: crimson;
+	background: #333;
 }

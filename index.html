@@ -5,56 +5,59 @@
 	<meta name="viewport" content="width=device-width , initial-scale=1.0">
 	<title>Navbar</title>
 	<link rel="stylesheet" type="text/css" href="font-awesome/Font/all.min.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome/Font/fontawesome.min.css">
+	//<link rel="stylesheet" type="text/css" href="font-awesome/Font/fontawesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<!----- NAVBAV START ------->
+<!----- NAVBAV START ------->
+<nav>
+    <div class="brand">
+    	  <h1>LOGO</h1>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="#">About</a></li>
+    	<li class="dropdown"><a href="#">Services <i class="fas fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Web Designing</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li class="submenu"><a href="#">Graphic Designing <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-submenu">
+                	         <li><a href="#">Banner Design</a></li>
+                	         <li><a href="#">Web Design</a></li>
+                	         <li><a href="#">Video Editing</a></li>
+                	         <li><a href="#">VFX Editing</a></li>
+                         </ul>
+                </li>
+                <li><a href="#">UI/UX Designing</a></li>
+            </ul>
+    	</li>
+    	<li class="dropdown"><a href="#">Products <i class="fas fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Banner Design</a></li>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Video Editing</a></li>
+                <li><a href="#">VFX Editing</a></li>
+            </ul>
+    	</li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+<div class="hamburger">
+	<i class="fas fa-bars" id="hamburger"></i>
+</div></nav>
 
 
-	<header class="header">
-		  <div class="logo">
-		  	    <h2>LOGO</h2>
-		  </div>
+<!----- NAVBAV END ------->
 
-		  <nav class="nav">
-		  	 <ul id="menu">
-		  	 	<li><a href="#">HOME</a></li>
-		  	 	<li><a href="#">ABOUT</a></li>
-		  	 	<li class="dropdown"><a href="#">SERVICES <i class="fas fa-angle-down"></i></a>
-		  	 		<ul class="dropdown-menu">
-		  	 			<li><a href="#">Web Designing</a></li>
-		  	 			<li><a href="#">Web Developement</a></li>
-		  	 			<li><a href="#">Graphic Design</a></li>
-		  	 			<li><a href="#">UI/UX Designing</a></li>
-		  	 		</ul>
-		  	 	</li>
-		  	 	<li class="dropdown"><a href="#">PRODUCTS <i class="fas fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-		  	 			<li><a href="#">PRODUCT 1</a></li>
-		  	 			<li><a href="#">PRODUCT 2</a></li>
-		  	 			<li><a href="#">PRODUCT 3</a></li>
-		  	 			<li><a href="#">PRODUCT 4</a></li>
-		  	 		</ul>
-		  	 	</li>
-		  	 	<li><a href="#">CONTACT</a></li>
-		  	 </ul>
-		  </nav>
+<!----- MAIN SECTION START------->
 
-		  <div class="toggle-icon">
-		  	  <i class="fas fa-bars" id="icon"></i>
-		  </div>
-	</header>
+<section class="main"></section>
 
-	<!----- NAVBAV END ------->
+<!----- SERVICES SECTION START------->
 
-	<!----- MAIN SECTION START------->
-
-	<section class="main"></section>
-
-	<!----- SERVICES SECTION START------->
-
-	<section class="service"></section>
+<section class="service"></section>
 <script src="js/main.js"></script>
 </body>
 </html>
